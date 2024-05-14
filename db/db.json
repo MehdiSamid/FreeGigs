@@ -1,6 +1,22 @@
 {
-  "user": [],
+  "users": [
+    {
+      "id": 1,
+      "username": "visec",
+      "email": "vypyfyrog@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "freelancer"
+    }
+  ],
   "freelancers": [],
-  "companies": [],
+  "companies": [
+    {
+      "id": "b237",
+      "Id": 96,
+      "userId": 27,
+      "companyName": "Voluptatem ab recusa",
+      "industry": "Eum voluptas quas mi"
+    }
+  ],
   "missions": []
 }
