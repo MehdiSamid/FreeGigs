@@ -18,7 +18,7 @@ export const routes: Routes = [
             path:"home",
             component:HomeComponent,
             title:"homepage"
-    
+
         },
            { path: 'companies', component: CompanyListComponent },
            { path: 'create-company', component: CompanyFormComponent },
@@ -29,7 +29,7 @@ export const routes: Routes = [
            { path: 'contact', component: ContactComponent },
            { path: 'signup', component: SignUpComponent},
            { path: 'login',component:SigninComponent},
-           
+
     {
         path:'**',
         component:PageNotFoundComponent

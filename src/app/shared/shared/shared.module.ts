@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FreelancerFormComponent } from '../../Components/freelancer-form/freelancer-form.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({

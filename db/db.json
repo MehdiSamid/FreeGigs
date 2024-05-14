@@ -1,11 +1,43 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "visec",
-      "email": "vypyfyrog@mailinator.com",
-      "password": "Pa$$w0rd!",
+      "id": "1",
+      "username": "dd",
+      "email": "eh@eh.com",
+      "password": "123",
       "role": "freelancer"
+    },
+    {
+      "id": "e389",
+      "username": "dd",
+      "password": "123"
+    },
+    {
+      "id": "f1ce",
+      "username": "dd",
+      "password": "123"
+    },
+    {
+      "id": "c04f",
+      "username": "dd",
+      "password": "123"
+    },
+    {
+      "id": "f0bb",
+      "username": "dd",
+      "password": "123"
+    },
+    {
+      "id": null,
+      "username": "tt",
+      "email": "mehdiinformatique4@gmail.com",
+      "password": "123",
+      "role": "freelancer"
+    },
+    {
+      "id": "b267",
+      "username": "dd",
+      "password": "123"
     }
   ],
   "freelancers": [],
