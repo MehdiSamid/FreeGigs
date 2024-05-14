@@ -5,7 +5,9 @@ import { FreelancerFormComponent } from '../../Components/freelancer-form/freela
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
   imports: [
     CommonModule,
   ]

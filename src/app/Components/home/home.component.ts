@@ -3,6 +3,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterLink } from '@angular/router';
 import { SignUpComponent } from "../sign-up/sign-up.component";
+import { SharedModule } from '../../shared/shared/shared.module';
 import { FreelancerFormComponent } from '../freelancer-form/freelancer-form.component';
 
 @Component({
@@ -10,8 +11,9 @@ import { FreelancerFormComponent } from '../freelancer-form/freelancer-form.comp
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [NavbarComponent, FooterComponent, RouterLink, SignUpComponent , FreelancerFormComponent]
+    imports: [NavbarComponent, FooterComponent, RouterLink, SignUpComponent , FreelancerFormComponent,SharedModule]
 })
 export class HomeComponent {
+
 
 }
