@@ -1,0 +1,18 @@
+<form [formGroup]="freelancerForm" (ngSubmit)="createFreelancer()">
+    <div>
+      <label>User ID</label>
+      <input type="number" formControlName="userId" required>
+      <div *ngIf="freelancerForm.get('userId').invalid && freelancerForm.get('userId').touched">
+        User ID is required
+      </div>
+    </div>
+    <div>
+      <label>Skills</label>
+      <input type="text" formControlName="skills" required>
+      <div *ngIf="freelancerForm.get('skills').invalid && freelancerForm.get('skills').touched">
+        Skills are required
+      </div>
+    </div>
+    <button type="submit" [disabled]="freelancerForm.invalid">Create Freelancer</button>
+  </form>
+  

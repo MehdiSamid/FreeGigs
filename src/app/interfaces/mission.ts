@@ -4,7 +4,11 @@ export interface Mission {
   description: string; 
   startDate: Date; 
   endDate: Date; 
-  status: string; 
+  status: 'planned' | 'ongoing' | 'completed' | 'cancelled';
   assignedTo: number; 
   createdBy: number; 
+  priority: 'low' | 'medium' | 'high';
+  location?: string; 
+  budget?: number; 
+  skillsRequired?: string[]; 
 }

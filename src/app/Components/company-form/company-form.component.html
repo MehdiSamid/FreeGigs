@@ -1,0 +1,25 @@
+<form [formGroup]="companyForm" (ngSubmit)="createCompany()">
+    <div>
+      <label>User ID</label>
+      <input type="number" formControlName="userId" required>
+      <div *ngIf="companyForm.get('userId').invalid && companyForm.get('userId').touched">
+        User ID is required
+      </div>
+    </div>
+    <div>
+      <label>Company Name</label>
+      <input type="text" formControlName="companyName" required>
+      <div *ngIf="companyForm.get('companyName').invalid && companyForm.get('companyName').touched">
+        Company Name is required
+      </div>
+    </div>
+    <div>
+      <label>Industry</label>
+      <input type="text" formControlName="industry" required>
+      <div *ngIf="companyForm.get('industry').invalid && companyForm.get('industry').touched">
+        Industry is required
+      </div>
+    </div>
+    <button type="submit" [disabled]="companyForm.invalid">Create Company</button>
+</form>
+  

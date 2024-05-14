@@ -1,0 +1,24 @@
+<div>
+    <h2>Freelancer List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User ID</th>
+          <th>Skills</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let freelancer of freelancers">
+          <td>{{ freelancer.id }}</td>
+          <td>{{ freelancer.userId }}</td>
+          <td>{{ freelancer.skills }}</td>
+          <td>
+            <button (click)="deleteFreelancer(freelancer.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
