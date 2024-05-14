@@ -1,25 +1,36 @@
-<form [formGroup]="companyForm" (ngSubmit)="createCompany()">
-    <div>
-      <label>User ID</label>
-      <input type="number" formControlName="userId" required>
-      <div *ngIf="companyForm.get('userId').invalid && companyForm.get('userId').touched">
-        User ID is required
-      </div>
+<div class="container mx-auto p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">Create Company</h2>
+<form [formGroup]="companyForm" (ngSubmit)="createCompany()" class="space-y-6">
+  <div>
+    <label class="block text-sm font-medium text-gray-700">ID</label>
+    <input type="number" formControlName="Id" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    <div *ngIf="companyForm.get('Id')!.invalid && companyForm.get('Id')!.touched" class="text-red-500 text-sm mt-1">
+      ID Company is required
     </div>
-    <div>
-      <label>Company Name</label>
-      <input type="text" formControlName="companyName" required>
-      <div *ngIf="companyForm.get('companyName').invalid && companyForm.get('companyName').touched">
-        Company Name is required
-      </div>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-gray-700">User ID</label>
+    <input type="number" formControlName="userId" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    <div *ngIf="companyForm.get('userId')!.invalid && companyForm.get('userId')!.touched" class="text-red-500 text-sm mt-1">
+      User ID is required
     </div>
-    <div>
-      <label>Industry</label>
-      <input type="text" formControlName="industry" required>
-      <div *ngIf="companyForm.get('industry').invalid && companyForm.get('industry').touched">
-        Industry is required
-      </div>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-gray-700">Company Name</label>
+    <input type="text" formControlName="companyName" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    <div *ngIf="companyForm.get('companyName')!.invalid && companyForm.get('companyName')!.touched" class="text-red-500 text-sm mt-1">
+      Company Name is required
     </div>
-    <button type="submit" [disabled]="companyForm.invalid">Create Company</button>
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-gray-700">Industry</label>
+    <input type="text" formControlName="industry" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    <div *ngIf="companyForm.get('industry')!.invalid && companyForm.get('industry')!.touched" class="text-red-500 text-sm mt-1">
+      Industry is required
+    </div>
+  </div>
+  <button type="submit" [disabled]="companyForm.invalid" class="mt-4 w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50">
+    Create Company
+  </button>
 </form>
-  
+</div>

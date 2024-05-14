@@ -10,7 +10,9 @@ import { Freelancer } from '../interfaces/freelancer';
 export class FreelancerService {
   private apiUrl = 'http://localhost:3000/freelancers'; 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    
+   }
 
   getFreelancers(): Observable<Freelancer[]> {
     return this.http.get<Freelancer[]>(this.apiUrl);

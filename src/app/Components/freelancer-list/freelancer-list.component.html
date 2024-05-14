@@ -1,24 +1,30 @@
-<div>
-    <h2>Freelancer List</h2>
-    <table>
-      <thead>
+<div class="p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">Freelancer List</h2>
+  <div class="mb-4">
+    <a routerLink="/create-freelancer" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+      Create Freelancer
+    </a>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
         <tr>
-          <th>ID</th>
-          <th>User ID</th>
-          <th>Skills</th>
-          <th>Actions</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User ID</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Skills</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="bg-white divide-y divide-gray-200">
         <tr *ngFor="let freelancer of freelancers">
-          <td>{{ freelancer.id }}</td>
-          <td>{{ freelancer.userId }}</td>
-          <td>{{ freelancer.skills }}</td>
-          <td>
-            <button (click)="deleteFreelancer(freelancer.id)">Delete</button>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.id }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.userId }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.skills }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+            <button (click)="deleteFreelancer(freelancer.id)" class="text-red-600 hover:text-red-900">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  
+</div>

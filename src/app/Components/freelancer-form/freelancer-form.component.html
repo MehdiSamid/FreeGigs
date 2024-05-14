@@ -1,18 +1,19 @@
-<form [formGroup]="freelancerForm" (ngSubmit)="createFreelancer()">
-    <div>
-      <label>User ID</label>
-      <input type="number" formControlName="userId" required>
-      <div *ngIf="freelancerForm.get('userId').invalid && freelancerForm.get('userId').touched">
-        User ID is required
-      </div>
+<form [formGroup]="freelancerForm" (ngSubmit)="createFreelancer()" class="p-6 bg-white rounded-lg shadow-md">
+  <div class="mb-4">
+    <label for="userId" class="block text-sm font-medium text-gray-700">User ID</label>
+    <input type="number" id="userId" formControlName="userId" class="mt-1 p-2 w-full border border-gray-300 rounded-md" required>
+    <div *ngIf="freelancerForm.get('userId')!.invalid && freelancerForm.get('userId')!.touched" class="text-red-500 text-sm mt-1">
+      User ID is required
     </div>
-    <div>
-      <label>Skills</label>
-      <input type="text" formControlName="skills" required>
-      <div *ngIf="freelancerForm.get('skills').invalid && freelancerForm.get('skills').touched">
-        Skills are required
-      </div>
+  </div>
+  <div class="mb-4">
+    <label for="skills" class="block text-sm font-medium text-gray-700">Skills</label>
+    <input type="text" id="skills" formControlName="skills" class="mt-1 p-2 w-full border border-gray-300 rounded-md" required>
+    <div *ngIf="freelancerForm.get('skills')!.invalid && freelancerForm.get('skills')!.touched" class="text-red-500 text-sm mt-1">
+      Skills are required
     </div>
-    <button type="submit" [disabled]="freelancerForm.invalid">Create Freelancer</button>
-  </form>
-  
+  </div>
+  <button type="submit" [disabled]="freelancerForm.invalid" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 disabled:opacity-50">
+    Create Freelancer
+  </button>
+</form>

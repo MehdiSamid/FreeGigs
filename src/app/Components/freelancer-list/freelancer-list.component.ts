@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FreelancerService } from '../../services/freelancer.service';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-freelancer-list',
   templateUrl: './freelancer-list.component.html',
+  standalone: true,
+  imports: [CommonModule,RouterModule],
   styleUrls: ['./freelancer-list.component.css']
 })
 export class FreelancerListComponent implements OnInit {
@@ -27,4 +31,5 @@ export class FreelancerListComponent implements OnInit {
       this.freelancers = this.freelancers.filter(freelancer => freelancer.id !== id);
     });
   }
+  
 }
