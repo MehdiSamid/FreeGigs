@@ -1,19 +1,6 @@
 {
   "users": [],
-  "freelancers": [
-    {
-      "id": "76a2",
-      "userId": 1,
-      "skills": "Laravel",
-      "freelancerLocation": "Morocco"
-    },
-    {
-      "id": "752f",
-      "userId": 2,
-      "skills": "Java",
-      "freelancerLocation": "Morocco"
-    }
-  ],
+  "freelancers": [],
   "companies": [],
   "missions": []
 }

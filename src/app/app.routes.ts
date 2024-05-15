@@ -26,7 +26,7 @@ export const routes: Routes = [
             path:"home",
             component:HomeComponent,
             title:"homepage"
-    
+
         },
            { path: 'companies', component: CompanyListComponent },
            { path: 'create-company', component: CompanyFormComponent },
