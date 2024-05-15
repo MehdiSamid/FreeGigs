@@ -23,7 +23,8 @@ export class FreelancerFormComponent implements OnInit {
   ) {
     this.freelancerForm = this.fb.group({
       userId: ['', Validators.required],
-      skills: ['', Validators.required]
+      skills: ['', Validators.required],
+      freelancerLocation:['',Validators.required]
     });
   }
 

@@ -1,0 +1,6 @@
+<div *ngIf="freelancers$ | async as freelancers" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div *ngFor="let freelancer of freelancers" class="bg-white rounded-lg shadow-md p-6">
+    <p class="text-xl font-semibold mb-4">{{ freelancer.skills }}</p>
+    <p class="text-gray-600">{{ freelancer.freelancerLocation }}</p>
+  </div>
+</div>

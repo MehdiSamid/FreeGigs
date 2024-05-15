@@ -1,1 +1,50 @@
-<app-navbar />
+    <div class="container mx-auto p-4">
+        <div class="flex flex-col items-center">
+            <div class="w-full max-w-4xl">
+                <h1 class="text-4xl font-bold mb-4">
+                    Find <span class="whitespace-nowrap">your IT freelancer</span>
+                    <span class="block text-blue-500">in just 48 hours!</span>
+                </h1>
+                <div class="text-lg mb-8">
+                    <div><strong>144,465 freelancers registered on the Freelance IT platform</strong></div>
+                    <div>in Digital Transformation & IS, IT Infrastructures & Cybersecurity</div>
+                </div>
+                <div class="w-full max-w-3xl">
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <form [formGroup]="searchForm" (ngSubmit)="onSearch()" autocomplete="off" class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 w-full md:w-1/2">
+                              <i class="fa fa-search text-gray-500"></i>
+                              <input type="text" formControlName="skills" id="skills" class="flex-1 p-2 border border-gray-300 rounded" placeholder="PHP developer, Java, C#...">
+                            </div>
+                            <div class="flex items-center gap-2 w-full md:w-1/4">
+                              <i class="fa fa-map-marker text-gray-500"></i>
+                              <select formControlName="freelancerLocation" class="flex-1 p-2 border border-gray-300 rounded" id="location">
+                                <option value="">Select a location</option>
+                                <option value="New York">New York</option>
+                                <option value="San Francisco">San Francisco</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="Morocco">Morocco</option> 
+                              </select>
+                            </div>
+                            <div class="flex items-center w-full md:w-auto">
+                              <button type="submit" class="p-2 bg-blue-500 text-white rounded" title="Search"><i class="fa fa-search"></i></button>
+                            </div>
+                          </form>
+                          
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <button class="bg-blue-500 text-white py-2 px-4 rounded" onclick="search('/freelancer-cv');">
+                            I find <span class="whitespace-nowrap">my freelancer</span>
+                        </button>
+                        <button class="bg-white text-blue-500 border border-blue-500 py-2 px-4 rounded " onclick="search('/freelance-jobs');">
+                            I look for <span class="whitespace-nowrap">a job</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+    </div>
+
+
+<app-footer></app-footer>

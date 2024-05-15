@@ -12,6 +12,7 @@
           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User ID</th>
           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Skills</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">freelancerLocation</th>
           <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
         </tr>
       </thead>
@@ -20,6 +21,7 @@
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.id }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.userId }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.skills }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ freelancer.freelancerLocation }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
             <button (click)="deleteFreelancer(freelancer.id)" class="text-red-600 hover:text-red-900">Delete</button>
           </td>

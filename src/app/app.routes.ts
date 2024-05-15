@@ -10,9 +10,17 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { SigninComponent } from './Components/signin/signin.component';
 import { MissionListComponent } from './Components/mission-list/mission-list.component';
+import { SearchFreelancerComponent } from './Components/searchfreelancer/searchfreelancer.component';
+import { LayoutsComponent } from './Components/layouts/layouts.component';
+
 
 export const routes: Routes = [
+    
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
+     {
+        path:"",
+        component:LayoutsComponent,
+        children : [
 
         {
             path:"home",
@@ -29,9 +37,13 @@ export const routes: Routes = [
            { path: 'contact', component: ContactComponent },
            { path: 'signup', component: SignUpComponent},
            { path: 'login',component:SigninComponent},
+           { path: 'search-freelancer', component:SearchFreelancerComponent},
            
     {
         path:'**',
         component:PageNotFoundComponent
     },
+]
+
+     }
 ];

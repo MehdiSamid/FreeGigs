@@ -1,5 +1,6 @@
 export interface Freelancer {
     id:number,
-    userId: number;
-    skills:[],
+    userId: number,
+    skills:string[],
+    freelancerLocation:string
 }

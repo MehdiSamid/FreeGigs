@@ -12,6 +12,13 @@
     <div *ngIf="freelancerForm.get('skills')!.invalid && freelancerForm.get('skills')!.touched" class="text-red-500 text-sm mt-1">
       Skills are required
     </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700">freelancer Location</label>
+      <input type="text" formControlName="freelancerLocation" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+      <div *ngIf="freelancerForm.get('freelancerLocation')!.invalid && freelancerForm.get('freelancerLocation')!.touched" class="text-red-500 text-sm mt-1">
+        freelancer Location is required
+      </div>
+    </div>
   </div>
   <button type="submit" [disabled]="freelancerForm.invalid" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 disabled:opacity-50">
     Create Freelancer
