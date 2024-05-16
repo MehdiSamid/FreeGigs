@@ -1,6 +1,8 @@
+import { Skills } from "../enums/skills";
+
 export interface Freelancer {
     id:number,
     userId: number,
-    skills:string[],
+    skills: Skills[],
     freelancerLocation:string
 }

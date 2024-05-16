@@ -1,6 +1,40 @@
 {
   "users": [],
-  "freelancers": [],
+  "freelancers": [
+    {
+      "id": "5e1e",
+      "userId": 1,
+      "skills": [
+        "DotNet"
+      ],
+      "freelancerLocation": "casa"
+    },
+    {
+      "id": "e87e",
+      "userId": 2,
+      "skills": [
+        "TypeScript"
+      ],
+      "freelancerLocation": "tanger"
+    },
+    {
+      "id": "180c",
+      "userId": 4,
+      "skills": [
+        "Java",
+        "DotNet"
+      ],
+      "freelancerLocation": "ss"
+    },
+    {
+      "id": "65f9",
+      "userId": 6,
+      "skills": [
+        "Angular"
+      ],
+      "freelancerLocation": "4"
+    }
+  ],
   "companies": [],
   "missions": []
 }
