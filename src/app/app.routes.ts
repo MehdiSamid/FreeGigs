@@ -12,11 +12,12 @@ import { SigninComponent } from './Components/signin/signin.component';
 import { MissionListComponent } from './Components/mission-list/mission-list.component';
 import { SearchFreelancerComponent } from './Components/searchfreelancer/searchfreelancer.component';
 import { LayoutsComponent } from './Components/layouts/layouts.component';
+import { authGuardGuard } from './guards/auth-guard.guard';
 
 
 export const routes: Routes = [
-    
-    { path: '',   redirectTo: '/home', pathMatch: 'full' },
+
+    { path: '',   redirectTo: '/home', pathMatch: 'full'  },
      {
         path:"",
         component:LayoutsComponent,
@@ -24,21 +25,21 @@ export const routes: Routes = [
 
         {
             path:"home",
-            component:HomeComponent,
+            component:HomeComponent, canActivate:[authGuardGuard],
             title:"homepage"
 
         },
-           { path: 'companies', component: CompanyListComponent },
-           { path: 'create-company', component: CompanyFormComponent },
-           { path: 'freelancers', component: FreelancerListComponent },
-           { path: 'create-freelancer', component: FreelancerFormComponent },
-           { path: 'create-mission', component: MissionFormComponent },
-           { path: 'missions',component:MissionListComponent},
-           { path: 'contact', component: ContactComponent },
+           { path: 'companies', component: CompanyListComponent , canActivate:[authGuardGuard] },
+           { path: 'create-company', component: CompanyFormComponent , canActivate:[authGuardGuard] },
+           { path: 'freelancers', component: FreelancerListComponent , canActivate:[authGuardGuard] },
+           { path: 'create-freelancer', component: FreelancerFormComponent , canActivate:[authGuardGuard]},
+           { path: 'create-mission', component: MissionFormComponent , canActivate:[authGuardGuard] },
+           { path: 'missions',component:MissionListComponent , canActivate:[authGuardGuard]},
+           { path: 'contact', component: ContactComponent , canActivate:[authGuardGuard] },
            { path: 'signup', component: SignUpComponent},
            { path: 'login',component:SigninComponent},
-           { path: 'search-freelancer', component:SearchFreelancerComponent},
-           
+           { path: 'search-freelancer', component:SearchFreelancerComponent , canActivate:[authGuardGuard]},
+
     {
         path:'**',
         component:PageNotFoundComponent

@@ -1,5 +1,28 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "1",
+      "username": "omar",
+      "email": "eh@eh.COM",
+      "password": "123",
+      "role": "freelancer"
+    },
+    {
+      "id": "2f91",
+      "username": "omar",
+      "password": "123"
+    },
+    {
+      "id": "c862",
+      "username": "omar",
+      "password": "123"
+    },
+    {
+      "id": "a175",
+      "username": "omar",
+      "password": "123"
+    }
+  ],
   "freelancers": [
     {
       "id": "5e1e",
@@ -33,6 +56,14 @@
         "Angular"
       ],
       "freelancerLocation": "4"
+    },
+    {
+      "id": "e07d",
+      "userId": 98,
+      "skills": [
+        "Python"
+      ],
+      "freelancerLocation": "data"
     }
   ],
   "companies": [],
