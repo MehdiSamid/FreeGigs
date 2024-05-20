@@ -13,6 +13,7 @@ import { MissionListComponent } from './Components/mission-list/mission-list.com
 import { SearchFreelancerComponent } from './Components/searchfreelancer/searchfreelancer.component';
 import { LayoutsComponent } from './Components/layouts/layouts.component';
 import { authGuardGuard } from './guards/auth-guard.guard';
+import { NewsComponent } from './Components/news/news.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,7 @@ export const routes: Routes = [
            { path: 'contact', component: ContactComponent , canActivate:[authGuardGuard] },
            { path: 'signup', component: SignUpComponent},
            { path: 'login',component:SigninComponent},
+           { path: 'news',component:NewsComponent},
            { path: 'search-freelancer', component:SearchFreelancerComponent , canActivate:[authGuardGuard]},
 
     {
