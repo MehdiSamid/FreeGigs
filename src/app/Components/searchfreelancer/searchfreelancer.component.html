@@ -1,0 +1,15 @@
+<div *ngIf="freelancers$ | async as freelancers" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div *ngFor="let freelancer of freelancers" class="bg-white rounded-lg shadow-md p-6">
+    <div class="flex flex-col justify-between h-full">
+      <p class="text-xl font-semibold mb-2">{{ freelancer.username }}</p> 
+      <p class="text-gray-600 mb-2"><strong>Email:</strong> {{ freelancer.email }}</p>
+      <p class="text-gray-600 mb-2"><strong>Skills:</strong> {{ freelancer.skills.join(', ') }}</p>
+      <p class="text-gray-600"><strong>Location:</strong> {{ freelancer.freelancerLocation }}</p>
+      <div class="mt-4">
+        <button (click)="redirectToFreelancers()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          View Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

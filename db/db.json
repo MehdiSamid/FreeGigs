@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "dezaryg",
+      "email": "duveq@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "freelancer"
+    },
+    {
+      "id": "2",
+      "username": "qilicokiki",
+      "email": "cimi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "freelancer"
+    },
+    {
+      "id": "3",
+      "username": "nadia",
+      "email": "nadiaoutizi2@gmail.com",
+      "password": "12345678",
+      "role": "company"
+    },
+    {
+      "id": 4,
+      "username": "pycekimo",
+      "email": "kotese@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "role": "freelancer"
+    }
+  ],
+  "freelancers": [
+    {
+      "username": "qilicohhhooooo",
+      "email": "cimi@mailinator.com",
+      "skills": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "freelancerLocation": "canada",
+      "IsAvailable": true,
+      "id": "2"
+    }
+  ],
+  "companies": [],
+  "missions": []
+}
