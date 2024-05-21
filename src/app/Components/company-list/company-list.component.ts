@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '../../services/company.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { Company } from '../../interfaces/company';
+import { pipe } from 'rxjs';
 
 
 @Component({
@@ -12,23 +15,25 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./company-list.component.css']
 })
 export class CompanyListComponent implements OnInit {
-  companies: any[] = [];
+  companies!: Company ;
 
-  constructor(private companyService: CompanyService) { }
+  constructor(private companyService: CompanyService , private auth : AuthService , private router : Router) { }
 
   ngOnInit(): void {
     this.getCompanies();
   }
 
   getCompanies(): void {
-    this.companyService.getCompanies().subscribe((data: any[]) => {
+    this.companyService.getCompanyByIdUser(this.auth.authenticatedUser.id).subscribe((data: any) => {
       this.companies = data;
+      console.log(data);
     });
   }
 
-  deleteCompany(id: number): void {
-    this.companyService.deleteCompany(id).subscribe(() => {
-      this.companies = this.companies.filter(company => company.id !== id);
-    });
-  }
+
+    editCompany(company: any): void {
+      this.router.navigate(['/company-form', { company: JSON.stringify(company), isUpdate: true }]);
+    }
+
+
 }

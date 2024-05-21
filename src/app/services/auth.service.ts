@@ -4,6 +4,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { map, switchMap, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { Company } from '../interfaces/company';
+import { CompanyService } from './company.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +14,12 @@ export class AuthService {
 
   private apiUrl = 'http://localhost:3000/users';
   public isAuth: boolean = false;
-  private authenticatedUser: IUser | null = null;
-  userIdKey!: string;
+  company! : Company ;
+  authenticatedUser!: IUser ;
+  userIdKey!: number;
   role!: string;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router , private companyService : CompanyService ) { }
 
   SignUp(user: IUser): Observable<IUser> {
     return this.getLastUserId().pipe(
@@ -52,7 +55,30 @@ export class AuthService {
       (user: IUser) => {
         this.isAuth = true;
         this.authenticatedUser = user;
+        if(user.role==='company'){
+        this.userIdKey = user.id;
+        this.companyService.getCompanyByIdUser(user.id).subscribe({
+          next: (createdCompany: Company) => {
+            this.company = createdCompany;
+            console.log('Company Finded :', createdCompany);
+            if(createdCompany){
+              this.router.navigate(['/companies-detail']);  // Redirect to the root path
+            }else{
+            this.router.navigate(['/company-form']);  // Redirect to the root path
+
+            }
+          },
+          error: (err) => {
+            console.error('Error creating company:', err);
+          }
+        });
+        console.log('User authenticated:', user);
+      }
+      else {
+        console.log('User authenticated:', user);
         this.router.navigate(['/']);  // Redirect to the root path
+
+        }
         console.log('User authenticated:', user);
         localStorage.setItem('role', user.role);
       },
@@ -88,5 +114,5 @@ export class AuthService {
   getRole() {
     return localStorage.getItem('role');
   }
- 
+
 }

@@ -13,10 +13,11 @@ import { MissionListComponent } from './Components/mission-list/mission-list.com
 import { SearchFreelancerComponent } from './Components/searchfreelancer/searchfreelancer.component';
 import { LayoutsComponent } from './Components/layouts/layouts.component';
 import { authGuard } from './guards/auth-guard.guard';
+import { NewsComponent } from './Components/news/news.component';
 
 
 export const routes: Routes = [
-    
+
     { path: '',   redirectTo: '/home', pathMatch: 'full' },
      {
         path:"",
@@ -29,25 +30,27 @@ export const routes: Routes = [
             title:"homepage"
 
         },
-           { path: 'companies', component: CompanyListComponent },
-           { 
+           { path: 'companies-detail', component: CompanyListComponent  },
+           { path: 'company-form', component: CompanyFormComponent , canActivate: [authGuard] },
+           {
             path: 'create-company',
             component: CompanyFormComponent,
-            canActivate: [authGuard] 
+            canActivate: [authGuard]
            },
            { path: 'freelancers', component: FreelancerListComponent },
-           { 
-            path: 'create-freelancer', 
+           {
+            path: 'create-freelancer',
             component: FreelancerFormComponent,
-            canActivate: [authGuard] 
+            canActivate: [authGuard]
             },
            { path: 'create-mission', component: MissionFormComponent },
            { path: 'missions',component:MissionListComponent},
            { path: 'contact', component: ContactComponent },
            { path: 'signup', component: SignUpComponent},
            { path: 'login',component:SigninComponent},
+           { path: 'news',component:NewsComponent},
            { path: 'search-freelancer', component:SearchFreelancerComponent},
-           
+
     {
         path:'**',
         component:PageNotFoundComponent

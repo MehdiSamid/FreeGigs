@@ -22,11 +22,60 @@
       "role": "company"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "pycekimo",
       "email": "kotese@mailinator.com",
       "password": "Pa$$w0rd!",
       "role": "freelancer"
+    },
+    {
+      "id": "5",
+      "username": "c",
+      "email": "company@gmail.com",
+      "password": "123",
+      "role": "company"
+    },
+    {
+      "id": "6",
+      "username": "tc",
+      "email": "eh@eh.com",
+      "password": "123",
+      "role": "company"
+    },
+    {
+      "id": "7",
+      "username": "ty",
+      "email": "company@gmail.com",
+      "password": "123",
+      "role": "company"
+    },
+    {
+      "id": "8",
+      "username": "tc",
+      "email": "company@gmail.com",
+      "password": "123",
+      "role": "company"
+    },
+    {
+      "id": 9,
+      "username": "tt",
+      "email": "test@Gmail.com",
+      "password": "123",
+      "role": "company"
+    },
+    {
+      "id": 10,
+      "username": "tc",
+      "email": "eh@eh.com",
+      "password": "123",
+      "role": "freelancer"
+    },
+    {
+      "id": 11,
+      "username": "tt",
+      "email": "company@gmail.com",
+      "password": "123",
+      "role": "company"
     }
   ],
   "freelancers": [
@@ -42,6 +91,31 @@
       "id": "2"
     }
   ],
-  "companies": [],
+  "companies": [
+    {
+      "id": 1,
+      "idUser": {
+        "id": 9,
+        "username": "tt",
+        "email": "test@Gmail.com",
+        "password": "123",
+        "role": "company"
+      },
+      "companyName": "TechC",
+      "industry": "IT"
+    },
+    {
+      "id": 2,
+      "idUser": {
+        "id": "6",
+        "username": "tc",
+        "email": "eh@eh.com",
+        "password": "123",
+        "role": "company"
+      },
+      "companyName": "It",
+      "industry": "123"
+    }
+  ],
   "missions": []
 }

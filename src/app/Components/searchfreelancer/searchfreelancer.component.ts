@@ -16,9 +16,9 @@ import { map ,switchMap } from 'rxjs/operators';
 export class SearchFreelancerComponent implements OnInit {
 
   freelancers$!: Observable<Freelancer[]>;
-  
+
   constructor(private route: ActivatedRoute, private freelancerService: FreelancerService,private router: Router) { }
-  
+
   redirectToFreelancers() {
     this.router.navigate(['/freelancers']);
   }
@@ -32,7 +32,6 @@ export class SearchFreelancerComponent implements OnInit {
       })
     );
   }
-
 
 }
 
